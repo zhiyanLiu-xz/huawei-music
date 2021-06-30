@@ -418,8 +418,7 @@ var Player = /*#__PURE__*/function () {
 new Player("#player");
 
 if (document.documentElement.clientWidth > 500) {
-  var img = document.createElement("img");
-  img.src = "./src/img/qrcode2.png";
+  var img = document.getElementById("img");
   img.style.position = "fixed";
   img.style.left = "50%";
   img.style.top = "50%";
@@ -433,5 +432,11 @@ if (document.documentElement.clientWidth > 500) {
 
   document.body.appendChild(img);
 }
+
+if (document.documentElement.clientWidth < 500) {
+  var _img = document.getElementById("img");
+
+  _img.style.display = "none";
+}
 },{"./icons":"MUcg","./swiper":"OCOi"}]},{},["EWR2"], null)
-//# sourceMappingURL=javascript.d3efc81d.js.map
+//# sourceMappingURL=javascript.c43c13be.js.map

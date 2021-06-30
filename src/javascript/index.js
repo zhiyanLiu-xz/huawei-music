@@ -195,8 +195,7 @@ class Player {
 new Player("#player");
 
 if (document.documentElement.clientWidth > 500) {
-  const img = document.createElement("img");
-  img.src = "./src/img/qrcode2.png";
+  const img = document.getElementById("img");
   img.style.position = "fixed";
   img.style.left = "50%";
   img.style.top = "50%";
@@ -207,4 +206,8 @@ if (document.documentElement.clientWidth > 500) {
     img.style.display = "none";
   };
   document.body.appendChild(img);
+}
+if (document.documentElement.clientWidth < 500) {
+  const img = document.getElementById("img");
+  img.style.display = "none";
 }
